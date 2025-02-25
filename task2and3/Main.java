@@ -9,20 +9,20 @@ public class Main {
         GameProgress gameProgress2 = new GameProgress(45, 6, 55, 200);
         GameProgress gameProgress3 = new GameProgress(60, 7, 60, 300);
 
-        saveGame(gameProgress1, "/Users/namigabdullaev/Games/savegames/save1.dat");
-        saveGame(gameProgress2, "/Users/namigabdullaev/Games/savegames/save2.dat");
-        saveGame(gameProgress3, "/Users/namigabdullaev/Games/savegames/save3.dat");
+        saveGame(gameProgress1, "/Users/admin/Games/savegames/save1.dat");
+        saveGame(gameProgress2, "/Users/admin/Games/savegames/save2.dat");
+        saveGame(gameProgress3, "/Users/admin/Games/savegames/save3.dat");
 
         zipFiles(
-                "/Users/namigabdullaev/Games/savegames/save.zip",
+                "/Users/admin/Games/savegames/save.zip",
                 new String[]{
-                        "/Users/namigabdullaev/Games/savegames/save1.dat",
-                        "/Users/namigabdullaev/Games/savegames/save2.dat",
-                        "/Users/namigabdullaev/Games/savegames/save3.dat"
+                        "/Users/admin/Games/savegames/save1.dat",
+                        "/Users/admin/Games/savegames/save2.dat",
+                        "/Users/admin/Games/savegames/save3.dat"
                 }
         );
 
-        File[] files = new File("/Users/namigabdullaev/Games/savegames").listFiles();
+        File[] files = new File("/Users/admin/Games/savegames").listFiles();
         for (File file : files) {
             if (file.isFile() && !file.getName().endsWith(".zip")) {
                 file.delete();
@@ -30,11 +30,11 @@ public class Main {
         }
 
         openZip(
-                "/Users/namigabdullaev/Games/savegames/save.zip",
-                "/Users/namigabdullaev/Games/savegames"
+                "/Users/admin/Games/savegames/save.zip",
+                "/Users/admin/Games/savegames"
         );
 
-        openProgress("/Users/namigabdullaev/Games/savegames/save1.dat");
+        openProgress("/Users/admin/Games/savegames/save1.dat");
     }
 
     static void saveGame(GameProgress gameProgress, String filePath) {

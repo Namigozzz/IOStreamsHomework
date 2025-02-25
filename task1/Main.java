@@ -6,9 +6,9 @@ import java.time.LocalDateTime;
 
 public class Main {
     public static void main(String[] args) {
-        File dir = new File("/Users/namigabdullaev/Games/res/icons");
-        File file = new File("/Users/namigabdullaev/Games/src/main/Utils.java");
-        File logFile = new File("/Users/namigabdullaev/Games/temp/temp.txt");
+        File dir = new File("/Users/admin/Games/res/icons");
+        File file = new File("/Users/admin/Games/src/main/Utils.java");
+        File logFile = new File("/Users/admin/Games/temp/temp.txt");
         StringBuilder sb = new StringBuilder();
         String log;
 
